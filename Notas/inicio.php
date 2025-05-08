@@ -44,7 +44,7 @@
         <p>Tu perfil es de Director/a</p>
         <form action="" method="POST">
             <button type="submit"><a href="insertar_notas.php">Insertar Nota</a></button>
-            <button type="submit"><a href="motrar_notas.php">Mostrar Notas</a></button>
+            <button type="submit"><a href="mostrar_notas.php">Mostrar Notas</a></button>
             <button type="submit"><a href="index.php">Cerrar Sesión</a></button>
         </form>
     <?php endif; ?>    
