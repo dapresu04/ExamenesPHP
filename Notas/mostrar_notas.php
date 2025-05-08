@@ -32,7 +32,8 @@ if ($result->num_rows > 0) {
     echo " <h1>Notas de los Alumnos</h1>";
     echo "<table border='1' cellpadding='5' cellspacing='0'>";
     echo "<tr><th>Alumno</th><th>Asignatura</th><th>Nota</th></tr>";
-    while ($fila = $result->fetch_assoc()) {
+    while ($fila = $result->fetch_assoc()) { //con el condicional while nos devuelve todas las filas posible ya que quieres multiples resultados. 
+        //Sin embargo, si utilizamos IF nos devolverá un solo parámetro, por ejemplo: Juan -> Sociales - 3. 
         $alumno = $fila["usuario"]; 
         $asignatura = $fila["asignatura"]; 
         $nota = $fila["nota"];
@@ -42,7 +43,7 @@ if ($result->num_rows > 0) {
         <td>$asignatura</td>
         <td>$nota</td>
       </tr>";
-}
+    }
 
 echo "</table>";
     
