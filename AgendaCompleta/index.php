@@ -14,7 +14,7 @@
                 $usu = $_POST["usuario"]; 
                 $contra = $_POST["contra"];
 
-                $sql = $conexion->prepare("SELECT * FROM usuario
+                $sql = $conexion->prepare("SELECT * FROM usuarios
                     WHERE Nombre = ? AND Clave = ?");
                 
                 $sql->bind_param("ss", $usu, $contra); 

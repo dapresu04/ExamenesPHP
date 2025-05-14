@@ -14,14 +14,13 @@
     var_dump($usu, $id_usu, $rol, $pulsaciones);
 
         $informacion = $conexion -> prepare("SELECT u.Codigo, u.Nombre, COUNT(c.codcontacto) AS contactos
-        FROM usuario u
-        LEFT JOIN contacto c ON u.Codigo = c.codusuario
+        FROM usuarios u
+        LEFT JOIN contactos c ON u.Codigo = c.codusuario
         GROUP BY u.Codigo, u.Nombre
-        HAVING contactos>2;
         
 
         ");
-    //$informacion->bind_param("i", $id_usu);
+    //  $informacion->bind_param("i", $id_usu);
     $informacion->execute(); 
     $result = $informacion->get_result(); 
     $contactos =0; 

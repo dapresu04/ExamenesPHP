@@ -19,7 +19,7 @@
             $emails = $_POST["email"]; 
             $telefonos = $_POST["telefono"]; 
 
-            $sql = $conexion->prepare("SELECT Nombre FROM usuario
+            $sql = $conexion->prepare("SELECT Nombre FROM usuarios
                 WHERE Nombre =? AND Codigo=?
             "); 
             $sql->bind_param("si", $usu, $id_usu); 
@@ -33,7 +33,7 @@
 
                         // Evita grabar contactos vacíos
                         if (!empty($nombre) && !empty($email) && !empty($telefono)) {
-                            $grabar = $conexion->prepare("INSERT IGNORE INTO contacto (nombre, email, telefono, codusuario) VALUES (?, ?, ?, ?)");
+                            $grabar = $conexion->prepare("INSERT IGNORE INTO contactos (nombre, email, telefono, codusuario) VALUES (?, ?, ?, ?)");
                             $grabar->bind_param("ssii", $nombre, $email, $telefono, $id_usu);
                             $grabar->execute();
                         }
