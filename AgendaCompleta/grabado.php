@@ -28,5 +28,6 @@
     <a href="index.php">Volver a Loguearse</a><br>
     <a href="inicio.php">Introducir más contactos para <?php echo $usu?></a><br>
     <a href="totales.php">Total de contactos guardados</a><br>
+    <a href="gestion.php">Ver mis contactos: <?php echo $usu?></a>
 </body>
 </html>
